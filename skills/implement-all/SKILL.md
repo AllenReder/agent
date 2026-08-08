@@ -36,7 +36,7 @@ The concurrency limit comes from the third argument when provided and otherwise 
 
 ### 1. Read in
 
-- **Preflight.** Two things must exist before any branch is cut or task created: `docs/agents/issue-tracker.md`, and the `implement` skill in your available-skills listing (bare or plugin-namespaced, e.g. `mattpocock-skills:implement`). Anything missing → report exactly what's absent and stop. The user does the fixing themselves — install Matt Pocock's engineering skills, then run `/setup-matt-pocock-skills` — because both are user-invoked.
+- **Preflight.** `docs/agents/issue-tracker.md` must exist before any branch is cut or task created. If it is missing, report it and stop.
 - Fetch the parent issue with its full body and comments — the spec.
 - `CONTEXT.md` (if it exists) and every ADR the parent or its children reference.
 - Enumerate the child tickets (sub-issues or task list, per the tracker doc) and verify each one's real state with the tracker — a ticket already closed is done, whatever the parent body says.
