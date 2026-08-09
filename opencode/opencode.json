@@ -1,0 +1,99 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "allenpi": {
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "apiKey": "",
+        "baseURL": "https://api.example.top/v1",
+        "setCacheKey": true
+      },
+      "models": {
+        "deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash",
+          "limit": { "context": 1000000, "output": 384000 },
+          "variants": {
+            "low":    { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
+            "high":   { "thinking": { "type": "enabled" }, "reasoningEffort": "high" },
+            "xhigh":  { "thinking": { "type": "enabled" }, "reasoningEffort": "xhigh" },
+            "max":    { "thinking": { "type": "enabled" }, "reasoningEffort": "max" },
+            "off":    { "thinking": { "type": "disabled" } }
+          }
+        },
+        "deepseek-v4-pro": {
+          "name": "DeepSeek V4 Pro",
+          "limit": { "context": 1000000, "output": 384000 },
+          "variants": {
+            "low":    { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
+            "high":   { "thinking": { "type": "enabled" }, "reasoningEffort": "high" },
+            "xhigh":  { "thinking": { "type": "enabled" }, "reasoningEffort": "xhigh" },
+            "max":    { "thinking": { "type": "enabled" }, "reasoningEffort": "max" },
+            "off":    { "thinking": { "type": "disabled" } }
+          }
+        },
+        "glm-5.2": {
+          "name": "GLM-5.2",
+          "limit": { "context": 1000000, "output": 131072 },
+          "variants": {
+            "off":    { "thinking": { "type": "disabled" } },
+            "low":    { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
+            "medium": { "thinking": { "type": "enabled" }, "reasoningEffort": "medium" },
+            "high":   { "thinking": { "type": "enabled" }, "reasoningEffort": "high" },
+            "max":    { "thinking": { "type": "enabled" }, "reasoningEffort": "max" }
+          }
+        },
+        "gpt-5.6-luna": {
+          "name": "GPT-5.6 Luna",
+          "limit": { "context": 256000, "output": 128000 },
+          "variants": {
+            "light":      { "reasoningEffort": "low", "textVerbosity": "low" },
+            "medium":     { "reasoningEffort": "medium", "textVerbosity": "low" },
+            "high":       { "reasoningEffort": "high", "textVerbosity": "low" },
+            "xhigh": { "reasoningEffort": "xhigh", "textVerbosity": "low" },
+            "max":        { "reasoningEffort": "max", "textVerbosity": "low" }
+          }
+        },
+        "gpt-5.6-sol": {
+          "name": "GPT-5.6 Sol",
+          "limit": { "context": 256000, "output": 128000 },
+          "variants": {
+            "light":      { "reasoningEffort": "low", "textVerbosity": "low" },
+            "medium":     { "reasoningEffort": "medium", "textVerbosity": "low" },
+            "high":       { "reasoningEffort": "high", "textVerbosity": "low" },
+            "xhigh": { "reasoningEffort": "xhigh", "textVerbosity": "low" },
+            "max":        { "reasoningEffort": "max", "textVerbosity": "low" }
+          }
+        },
+        "gpt-5.6-terra": {
+          "name": "GPT-5.6 Terra",
+          "limit": { "context": 256000, "output": 128000 },
+          "variants": {
+            "light":      { "reasoningEffort": "low", "textVerbosity": "low" },
+            "medium":     { "reasoningEffort": "medium", "textVerbosity": "low" },
+            "high":       { "reasoningEffort": "high", "textVerbosity": "low" },
+            "xhigh": { "reasoningEffort": "xhigh", "textVerbosity": "low" },
+            "max":        { "reasoningEffort": "max", "textVerbosity": "low" }
+          }
+        },
+        "kimi-k3": {
+          "name": "Kimi K3",
+          "limit": { "context": 262144, "output": 262144 },
+          "variants": {
+            "off":  { "thinking": { "type": "disabled" } },
+            "low":  { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
+            "high": { "thinking": { "type": "enabled" }, "reasoningEffort": "high" },
+            "max":  { "thinking": { "type": "enabled" }, "reasoningEffort": "max" }
+          }
+        },
+        "minimax-m3": {
+          "name": "MiniMax-M3",
+          "limit": { "context": 1000000, "output": 128000 },
+          "variants": {
+            "off":    { "thinking": { "type": "disabled" } },
+            "on":     { "thinking": { "type": "adaptive" } }
+          }
+        }
+      }
+    }
+  }
+}
