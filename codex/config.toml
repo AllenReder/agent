@@ -1,0 +1,27 @@
+model_provider = "custom"
+model = "gpt-5.6-sol"
+model_reasoning_effort = "xhigh"
+
+service_tier = "default"
+approvals_reviewer = "auto_review"
+
+[model_providers.custom]
+name = "AllenPI"
+wire_api = "responses"
+requires_openai_auth = true
+base_url = "https://api.example.top/v1"
+experimental_bearer_token = ""
+
+[hooks]
+
+[[hooks.PermissionRequest]]
+[[hooks.PermissionRequest.hooks]]
+type = "command"
+command = "zsh -lc 'host=\"${HOST:-$(hostname)}\"; bark -t \"Codex @ ${host}\" -b \"需要你审批 Codex 的工具调用\" -i \"https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.88.0/light/codex-color.png\" -g \"codex\" -l \"timeSensitive\" >> /tmp/codex-bark-hook.log 2>&1 || true'"
+timeout = 5
+
+[[hooks.Stop]]
+[[hooks.Stop.hooks]]
+type = "command"
+command = "zsh -lc 'host=\"${HOST:-$(hostname)}\"; bark -t \"Codex @ ${host}\" -b \"本轮 Codex 回复已结束\" -i \"https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.88.0/light/codex-color.png\" -g \"codex\" -l \"active\" >> /tmp/codex-bark-hook.log 2>&1 || true'"
+timeout = 5
