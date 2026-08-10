@@ -1,9 +1,4 @@
 {
-  "attribution": {
-    "commit": "",
-    "pr": ""
-  },
-  "effortLevel": "high",
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "",
     "ANTHROPIC_BASE_URL": "https://api.example.top",
@@ -16,21 +11,28 @@
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "cc-gpt-5.6-terra",
     "ANTHROPIC_DEFAULT_SONNET_MODEL_NAME": "gpt-5.6-terra",
     "ANTHROPIC_MODEL": "cc-gpt-5.6-sol",
-    "BARK_DEVICE_KEYS": "",
-    "BARK_SERVER": "https://bark.example.top/push",
-    "CLAUDE_CODE_DISABLE_1M_CONTEXT": "1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_CODE_MAX_CONTEXT_TOKENS": "262144",
-    "CLAUDE_CODE_SUBAGENT_MODEL": "cc-gpt-5.6-terra"
+    "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "262144",
+    "BARK_DEVICE_KEYS": "token1 token2",
+    "BARK_SERVER": "https://bark.example.top/push"
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "skillOverrides": {
+    "claude-api": "user-invocable-only"
   },
   "hooks": {
     "PermissionRequest": [
       {
         "hooks": [
           {
-            "async": true,
+            "type": "command",
             "command": "h=\"${HOST:-$(hostname)}\"; bark -t \"Claude Code @ $h\" -b \"需要你审批 Claude Code 的工具调用\" -i \"https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.88.0/light/claudecode-color.png\" -g 'claude-code' -l 'timeSensitive' >/dev/null 2>&1 || true",
             "timeout": 5,
-            "type": "command"
+            "async": true
           }
         ]
       }
@@ -39,16 +41,17 @@
       {
         "hooks": [
           {
-            "async": true,
+            "type": "command",
             "command": "h=\"${HOST:-$(hostname)}\"; bark -t \"Claude Code @ $h\" -b \"本轮 Claude Code 回复已结束\" -i \"https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png@1.88.0/light/claudecode-color.png\" -g 'claude-code' -l 'active' >/dev/null 2>&1 || true",
             "timeout": 5,
-            "type": "command"
+            "async": true
           }
         ]
       }
     ]
   },
-  "model": "opus",
+  "enabledPlugins": {},
   "skipWebFetchPreflight": true,
+  "effortLevel": "high",
   "tui": "default"
 }
