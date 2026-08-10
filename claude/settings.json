@@ -24,6 +24,12 @@
   "skillOverrides": {
     "claude-api": "user-invocable-only"
   },
+  "permissions": {
+    "defaultMode": "auto",
+    "allow": [
+      "WebSearch"
+    ]
+  },
   "hooks": {
     "PermissionRequest": [
       {
