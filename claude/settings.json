@@ -11,11 +11,12 @@
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "cc-gpt-5.6-terra",
     "ANTHROPIC_DEFAULT_SONNET_MODEL_NAME": "gpt-5.6-terra",
     "ANTHROPIC_MODEL": "cc-gpt-5.6-sol",
+    "BARK_DEVICE_KEYS": "token1 token2",
+    "BARK_SERVER": "https://bark.example.top/push",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_CODE_MAX_CONTEXT_TOKENS": "262144",
     "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "262144",
-    "BARK_DEVICE_KEYS": "token1 token2",
-    "BARK_SERVER": "https://bark.example.top/push"
+    "CLAUDE_CODE_SUBAGENT_MODEL": "cc-gpt-5.6-sol"
   },
   "attribution": {
     "commit": "",
