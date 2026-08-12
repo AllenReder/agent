@@ -1,0 +1,86 @@
+{
+  "version": 3,
+  "lines": [
+    [
+      {
+        "id": "eaca7694-9781-4d94-a63a-b3938c779491",
+        "type": "current-working-dir",
+        "color": "",
+        "rawValue": true,
+        "metadata": {
+          "abbreviateHome": "true"
+        }
+      },
+      {
+        "id": "e0a2745b-b3ee-4998-9371-3636cd474d08",
+        "type": "separator"
+      },
+      {
+        "id": "5",
+        "type": "git-branch",
+        "color": "brightRed"
+      },
+      {
+        "id": "0d808a55-f845-4398-9a8f-a268a3f59755",
+        "type": "separator"
+      },
+      {
+        "id": "7",
+        "type": "git-changes",
+        "color": "yellow"
+      },
+      {
+        "id": "6",
+        "type": "flex-separator",
+        "color": "white"
+      },
+      {
+        "id": "1",
+        "type": "model",
+        "color": "gradient:cristal",
+        "rawValue": true
+      },
+      {
+        "id": "96001b54-53e9-4066-8432-5cd958c35779",
+        "type": "thinking-effort",
+        "color": "gradient:cristal",
+        "rawValue": true
+      },
+      {
+        "id": "acd9f752-e32a-4fb1-a6eb-8e2eb6481aff",
+        "type": "context-bar",
+        "color": "gradient:teen",
+        "rawValue": true
+      }
+    ],
+    [],
+    []
+  ],
+  "flexMode": "full-until-compact",
+  "compactThreshold": 60,
+  "colorLevel": 3,
+  "defaultPadding": " ",
+  "defaultPaddingSide": "both",
+  "inheritSeparatorColors": false,
+  "globalBold": false,
+  "gitCacheTtlSeconds": 5,
+  "minimalistMode": false,
+  "powerline": {
+    "enabled": false,
+    "separators": [
+      ""
+    ],
+    "separatorInvertBackground": [
+      false
+    ],
+    "startCaps": [],
+    "endCaps": [],
+    "theme": "nord-aurora",
+    "autoAlign": true,
+    "continueThemeAcrossLines": true
+  },
+  "installation": {
+    "method": "pinned",
+    "installedVersion": "2.2.27"
+  }
+}
