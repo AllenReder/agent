@@ -1,0 +1,42 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "j j": "vim::NormalBefore",
+    },
+  },
+  {
+    "context": "Editor && vim_mode == normal && !menu",
+    "bindings": {
+      "space d": ["workspace::SendKeystrokes", "d d"],
+      "j": ["workspace::SendKeystrokes", "g j"],
+      "k": ["workspace::SendKeystrokes", "g k"],
+      "shift-j": ["workspace::SendKeystrokes", "ctrl-d"],
+      "shift-k": ["workspace::SendKeystrokes", "ctrl-u"],
+      "ctrl-n": ["workspace::SendKeystrokes", ": nohl enter"],
+    },
+  },
+  {
+    "context": "Editor && vim_mode == visual && !menu",
+    "bindings": {
+      "shift-j": ["workspace::SendKeystrokes", "ctrl-d"],
+      "shift-k": ["workspace::SendKeystrokes", "ctrl-u"],
+    },
+  },
+  {
+    "context": "Editor && !menu",
+    "bindings": {
+      "ctrl-a": "editor::SelectAll",
+      "ctrl-f": "buffer_search::Deploy",
+      "ctrl-c": "editor::Copy",
+      "ctrl-y": "editor::Undo",
+    },
+  },
+]
