@@ -28,12 +28,7 @@
   "agent": {
     "button": true,
     "tool_permissions": {
-      "default": "allow",
-      "tools": {
-        "terminal": {
-          "default": "confirm"
-        }
-      }
+      "default": "allow"
     },
     "sidebar_side": "right",
     "dock": "right",
