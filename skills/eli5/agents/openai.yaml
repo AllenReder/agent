@@ -1,0 +1,5 @@
+interface:
+  display_name: "Explain Like I'm 5"
+  short_description: "Explain a topic like I'm a 5 year old."
+policy:
+  allow_implicit_invocation: false
