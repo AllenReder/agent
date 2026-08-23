@@ -3,12 +3,36 @@ set -eu
 
 script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 target_dir="${XDG_CONFIG_HOME:-$HOME/.config}/opencode"
-target_file="$target_dir/opencode.json"
 
 mkdir -p "$target_dir"
-if [ -f "$target_file" ]; then
-  cp "$target_file" "$target_file.backup.$(date +%Y%m%d%H%M%S)"
+mkdir -p "$target_dir/plugins"
+
+# 1. Install opencode.json (model/provider configs)
+if [ -f "$script_dir/opencode.json" ]; then
+  if [ -f "$target_dir/opencode.json" ]; then
+    cp "$target_dir/opencode.json" "$target_dir/opencode.json.backup.$(date +%Y%m%d%H%M%S)"
+  fi
+  cp "$script_dir/opencode.json" "$target_dir/opencode.json"
+  printf 'Installed OpenCode config to %s\n' "$target_dir/opencode.json"
 fi
 
-cp "$script_dir/opencode.json" "$target_file"
-printf 'Installed OpenCode settings to %s\n' "$target_file"
+# 2. Install tui.jsonc (UI & plugin registrations)
+if [ -f "$script_dir/tui.jsonc" ]; then
+  if [ -f "$target_dir/tui.jsonc" ]; then
+    cp "$target_dir/tui.jsonc" "$target_dir/tui.jsonc.backup.$(date +%Y%m%d%H%M%S)"
+  fi
+  cp "$script_dir/tui.jsonc" "$target_dir/tui.jsonc"
+  printf 'Installed OpenCode TUI config to %s\n' "$target_dir/tui.jsonc"
+fi
+
+# 3. Install plugins (copy all .js files under plugins/)
+if [ -d "$script_dir/plugins" ]; then
+  for plugin_file in "$script_dir/plugins"/*.js; do
+    if [ -f "$plugin_file" ]; then
+      cp "$plugin_file" "$target_dir/plugins/"
+      printf 'Installed plugin: %s\n' "$(basename "$plugin_file")"
+    fi
+  done
+fi
+
+printf 'All OpenCode configurations and plugins installed successfully.\n'
