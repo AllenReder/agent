@@ -5,11 +5,15 @@
 prefix = "ctrl+a"
 
 [theme]
-name = "catppuccin"
+name = "vesper"
 
+auto_switch = false
 [theme.custom]
 panel_bg = "transparent"
 sidebar_bg = "transparent"
 surface0 = "transparent"
 surface1 = "transparent"
+
+[ui.toast]
+delivery = "terminal"
 
