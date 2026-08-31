@@ -173,7 +173,7 @@
   "vim_mode": false,
   "terminal": {
     "font_size": 15.0,
-    "font_family": "MesloLGS NF",
+    "font_family": "Maple Mono NF CN",
     "font_fallbacks": ["Microsoft Yahei", "monospace"],
   },
   "telemetry": {
@@ -191,7 +191,7 @@
   },
   "cursor_blink": true,
   "buffer_font_fallbacks": ["Microsoft Yahei", "monospace"],
-  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_family": "Maple Mono NF CN",
   "linked_edits": true,
   "agent_servers": {
     "opencode": {

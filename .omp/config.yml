@@ -10,7 +10,7 @@ modelRoles:
   smol: allenpi/gemini-3.7-flash:high
   tiny: allenpi/gemini-3.7-flash:high
 
-symbolPreset: unicode
+symbolPreset: nerd
 
 composer:
   shape: claude
