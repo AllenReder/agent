@@ -1,0 +1,57 @@
+# Project-level omp configuration
+# This overrides global configuration (~/.omp/agent/config.yml) for this repository.
+
+modelRoles:
+  default: allenpi/gpt-5.6-terra:high
+  vision: allenpi/gemini-3.7-flash:auto
+  advisor: allenpi/glm-5.3
+  task: allenpi/gpt-5.6-terra:high
+  slow: allenpi/gpt-5.6-sol:xhigh
+  smol: allenpi/gemini-3.7-flash:high
+  tiny: allenpi/gemini-3.7-flash:high
+
+symbolPreset: unicode
+
+composer:
+  shape: claude
+
+theme:
+  dark: titanium
+
+hideThinkingBlock: true
+
+memory:
+  backend: local
+
+autolearn:
+  enabled: false
+
+edit:
+  mode: hashline
+
+statusLine:
+  separator: powerline-thin
+
+task:
+  isolation:
+    mode: auto
+    merge: branch
+    apply: false
+  prewalk: false
+  maxRecursionDepth: 3
+  maxConcurrency: 32
+  eager: preferred
+
+
+cycleOrder:
+  - default
+  - smol
+  - slow
+
+retry:
+  fallbackChains:
+    smol:
+      - allenpi/gpt-5.6-luna
+      - allenpi/deepseek-v4-flash
+    tiny:
+      - minimax-code-cn/MiniMax-M3
