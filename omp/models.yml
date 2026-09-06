@@ -54,8 +54,8 @@ providers:
             xhigh: xhigh
             max: max
 
-      - id: gemini-3.7-flash
-        name: Gemini 3.7 Flash
+      - id: gemini-3.8-flash
+        name: Gemini 3.8 Flash
         input: [text, image]
         supportsTools: true
         contextWindow: 1000000

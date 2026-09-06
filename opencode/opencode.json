@@ -91,6 +91,16 @@
             "off":    { "thinking": { "type": "disabled" } },
             "on":     { "thinking": { "type": "adaptive" } }
           }
+        },
+        "gemini-3.8-flash": {
+          "name": "Gemini 3.8 Flash",
+          "limit": { "context": 1000000, "output": 128000 },
+          "variants": {
+            "off":  { "thinking": { "type": "disabled" } },
+            "low":  { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
+            "high": { "thinking": { "type": "enabled" }, "reasoningEffort": "high" },
+            "max":  { "thinking": { "type": "enabled" }, "reasoningEffort": "max" }
+          }
         }
       }
     }
