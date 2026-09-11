@@ -3,8 +3,8 @@
 
 modelRoles:
   default: allenpi/gpt-5.6-terra:high
-  vision: allenpi/gemini-3.7-flash:auto
-  advisor: allenpi/glm-5.3
+  vision: allenpi/gemini-3.8-flash:auto
+  advisor: allenpi/kimi-k3
   task: allenpi/gpt-5.6-terra:high
   slow: allenpi/gpt-5.6-sol:xhigh
   smol: allenpi/gemini-3.8-flash:high
@@ -52,6 +52,6 @@ retry:
   fallbackChains:
     smol:
       - allenpi/gpt-5.6-luna
-      - allenpi/deepseek-v4-flash
+      - allenpi/deepseek-v4.1-flash
     tiny:
       - minimax-code-cn/MiniMax-M3

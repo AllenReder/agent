@@ -9,20 +9,16 @@
         "setCacheKey": true
       },
       "models": {
-        "deepseek-v4-flash": {
-          "name": "DeepSeek V4 Flash",
-          "limit": { "context": 1000000, "output": 384000 },
-          "variants": {
-            "low":    { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
-            "high":   { "thinking": { "type": "enabled" }, "reasoningEffort": "high" },
-            "xhigh":  { "thinking": { "type": "enabled" }, "reasoningEffort": "xhigh" },
-            "max":    { "thinking": { "type": "enabled" }, "reasoningEffort": "max" },
-            "off":    { "thinking": { "type": "disabled" } }
-          }
-        },
-        "deepseek-v4-pro": {
-          "name": "DeepSeek V4 Pro",
-          "limit": { "context": 1000000, "output": 384000 },
+        "deepseek-v4.1-flash": {
+          "name": "DeepSeek V4.1 Flash",
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "limit": { "context": 1000000, "output": 128000 },
           "variants": {
             "low":    { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
             "high":   { "thinking": { "type": "enabled" }, "reasoningEffort": "high" },
@@ -33,7 +29,7 @@
         },
         "gpt-5.6-luna": {
           "name": "GPT-5.6 Luna",
-          "limit": { "context": 256000, "output": 128000 },
+          "limit": { "context": 1000000, "output": 128000 },
           "variants": {
             "light":      { "reasoningEffort": "low", "textVerbosity": "low" },
             "medium":     { "reasoningEffort": "medium", "textVerbosity": "low" },
@@ -44,7 +40,7 @@
         },
         "gpt-5.6-sol": {
           "name": "GPT-5.6 Sol",
-          "limit": { "context": 256000, "output": 128000 },
+          "limit": { "context": 1000000, "output": 128000 },
           "variants": {
             "light":      { "reasoningEffort": "low", "textVerbosity": "low" },
             "medium":     { "reasoningEffort": "medium", "textVerbosity": "low" },
@@ -55,7 +51,7 @@
         },
         "gpt-5.6-terra": {
           "name": "GPT-5.6 Terra",
-          "limit": { "context": 256000, "output": 128000 },
+          "limit": { "context": 1000000, "output": 128000 },
           "variants": {
             "light":      { "reasoningEffort": "low", "textVerbosity": "low" },
             "medium":     { "reasoningEffort": "medium", "textVerbosity": "low" },
@@ -66,7 +62,7 @@
         },
         "kimi-k3": {
           "name": "Kimi K3",
-          "limit": { "context": 1000000, "output": 131072 },
+          "limit": { "context": 1000000, "output": 128000 },
           "variants": {
             "off":  { "thinking": { "type": "disabled" } },
             "low":  { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
@@ -74,9 +70,9 @@
             "max":  { "thinking": { "type": "enabled" }, "reasoningEffort": "max" }
           }
         },
-        "glm-5.3": {
-          "name": "GLM-5.3",
-          "limit": { "context": 1000000, "output": 131072 },
+        "glm-5.3-flash": {
+          "name": "GLM-5.3 Flash",
+          "limit": { "context": 1000000, "output": 128000 },
           "variants": {
             "off":  { "thinking": { "type": "disabled" } },
             "low":  { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },

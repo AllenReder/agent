@@ -48,10 +48,38 @@
         "api_url": "https://api.example.top/v1",
         "available_models": [
           {
-            "name": "deepseek-v4-flash",
+            "name": "deepseek-v4.1-flash",
             "max_tokens": 1000000,
-            "max_output_tokens": 384000,
-            "max_completion_tokens": 384000,
+            "max_output_tokens": 128000,
+            "max_completion_tokens": 128000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true,
+              "interleaved_reasoning": true,
+            },
+          },
+          {
+            "name": "gemini-3.8-flash",
+            "max_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "max_completion_tokens": 128000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true,
+              "interleaved_reasoning": true,
+            },
+          },
+          {
+            "name": "glm-5.3-flash",
+            "max_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "max_completion_tokens": 128000,
             "capabilities": {
               "tools": true,
               "images": false,
@@ -62,27 +90,13 @@
             },
           },
           {
-            "name": "deepseek-v4-pro",
+            "name": "gpt-5.3-codex-spark",
             "max_tokens": 1000000,
-            "max_output_tokens": 384000,
-            "max_completion_tokens": 384000,
+            "max_output_tokens": 128000,
+            "max_completion_tokens": 128000,
             "capabilities": {
               "tools": true,
-              "images": false,
-              "parallel_tool_calls": true,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": true,
-            },
-          },
-          {
-            "name": "glm-5.3",
-            "max_tokens": 1000000,
-            "max_output_tokens": 131072,
-            "max_completion_tokens": 131072,
-            "capabilities": {
-              "tools": true,
-              "images": false,
+              "images": true,
               "parallel_tool_calls": true,
               "prompt_cache_key": true,
               "chat_completions": true,
@@ -91,7 +105,7 @@
           },
           {
             "name": "gpt-5.6-sol",
-            "max_tokens": 256000,
+            "max_tokens": 1000000,
             "max_output_tokens": 128000,
             "max_completion_tokens": 128000,
             "capabilities": {
@@ -105,7 +119,7 @@
           },
           {
             "name": "gpt-5.6-terra",
-            "max_tokens": 256000,
+            "max_tokens": 1000000,
             "max_output_tokens": 128000,
             "max_completion_tokens": 128000,
             "capabilities": {
@@ -119,7 +133,7 @@
           },
           {
             "name": "gpt-5.6-luna",
-            "max_tokens": 256000,
+            "max_tokens": 1000000,
             "max_output_tokens": 128000,
             "max_completion_tokens": 128000,
             "capabilities": {
@@ -134,8 +148,8 @@
           {
             "name": "kimi-k3",
             "max_tokens": 1000000,
-            "max_output_tokens": 131072,
-            "max_completion_tokens": 131072,
+            "max_output_tokens": 128000,
+            "max_completion_tokens": 128000,
             "capabilities": {
               "tools": true,
               "images": true,

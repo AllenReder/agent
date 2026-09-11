@@ -18,31 +18,13 @@ providers:
           defaultLevel: high
           requiresEffort: false
 
-      - id: deepseek-v4-flash
-        name: DeepSeek V4 Flash
-        input: [text]
+      - id: deepseek-v4.1-flash
+        name: DeepSeek V4.1 Flash
+        input: [text, image]
         supportsTools: true
         reasoning: true
         contextWindow: 1000000
-        maxTokens: 384000
-        thinking:
-          mode: effort
-          efforts: [low, high, xhigh, max]
-          defaultLevel: high
-          requiresEffort: false
-          effortMap:
-            low: low
-            high: high
-            xhigh: xhigh
-            max: max
-
-      - id: deepseek-v4-pro
-        name: DeepSeek V4 Pro
-        input: [text]
-        supportsTools: true
-        reasoning: true
-        contextWindow: 1000000
-        maxTokens: 384000
+        maxTokens: 128000
         thinking:
           mode: effort
           efforts: [low, high, xhigh, max]
@@ -59,15 +41,15 @@ providers:
         input: [text, image]
         supportsTools: true
         contextWindow: 1000000
-        maxTokens: 256000
+        maxTokens: 128000
 
-      - id: glm-5.3
-        name: GLM-5.3
+      - id: glm-5.3-flash
+        name: GLM-5.3 Flash
         input: [text]
         supportsTools: true
         reasoning: true
         contextWindow: 1000000
-        maxTokens: 131072
+        maxTokens: 128000
         thinking:
           mode: effort
           efforts: [low, high, max]
@@ -82,7 +64,7 @@ providers:
         name: GPT-5.3 Codex Spark
         input: [text, image]
         supportsTools: true
-        contextWindow: 256000
+        contextWindow: 1000000
         maxTokens: 128000
 
       - id: gpt-5.6-luna
@@ -145,7 +127,7 @@ providers:
         supportsTools: true
         reasoning: true
         contextWindow: 1000000
-        maxTokens: 131072
+        maxTokens: 128000
         thinking:
           mode: effort
           efforts: [low, high, max]
