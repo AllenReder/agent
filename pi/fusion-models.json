@@ -1,0 +1,10 @@
+{
+  "schema_version": "pi-background-tasks.fusion-models.v1",
+  "candidates": [
+    "allenreder/kimi-k3",
+    "allenreder/glm-5.3-flash",
+    "allenreder/deepseek-v4.1-flash"
+  ],
+  "evaluator": "allenreder/kimi-k3",
+  "merger": "allenreder/kimi-k3"
+}

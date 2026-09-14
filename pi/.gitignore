@@ -1,0 +1,10 @@
+# Runtime state and secrets: never version these, even if the directory is
+# mirrored wholesale from ~/.pi/agent.
+auth.json
+models-store.json
+sessions/
+tasks/
+web-search-cache/
+npm/
+bin/
+trust.json
