@@ -9,20 +9,6 @@
       },
       "models": [
         {
-          "id": "MiniMax-M3",
-          "reasoning": true,
-          "input": [
-            "text",
-            "image"
-          ],
-          "contextWindow": 1000000,
-          "maxTokens": 128000,
-          "thinkingLevelMap": {
-            "xhigh": null,
-            "max": null
-          }
-        },
-        {
           "id": "deepseek-v4.1-flash",
           "name": "DeepSeek-V4.1-Flash",
           "reasoning": true,
@@ -31,11 +17,26 @@
             "image"
           ],
           "contextWindow": 1000000,
-          "maxTokens": 128000,
+          "maxTokens": 256000,
           "thinkingLevelMap": {
             "off": null,
             "minimal": null,
             "xhigh": "xhigh",
+            "max": "max"
+          }
+        },
+        {
+          "id": "glm-5.3",
+          "name": "GLM-5.3",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "contextWindow": 1000000,
+          "maxTokens": 128000,
+          "thinkingLevelMap": {
+            "off": null,
+            "minimal": null,
             "max": "max"
           }
         },
@@ -48,21 +49,22 @@
             "image"
           ],
           "contextWindow": 1000000,
-          "maxTokens": 127997,
+          "maxTokens": 128000,
           "thinkingLevelMap": {
             "off": null,
             "minimal": null
           }
         },
         {
-          "id": "glm-5.3",
-          "name": "GLM-5.3",
+          "id": "kimi-k3",
+          "name": "Kimi-K3",
           "reasoning": true,
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "contextWindow": 1000000,
-          "maxTokens": 127999,
+          "maxTokens": 128000,
           "thinkingLevelMap": {
             "off": null,
             "minimal": null,
@@ -70,8 +72,24 @@
           }
         },
         {
-          "id": "kimi-k3",
-          "name": "Kimi-K3",
+          "id": "kimi-k3-256k",
+          "name": "Kimi-K3-256K",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "contextWindow": 262144,
+          "maxTokens": 128000,
+          "thinkingLevelMap": {
+            "off": null,
+            "minimal": null,
+            "max": "max"
+          }
+        },
+        {
+          "id": "kimi-k2.8",
+          "name": "Kimi-K2.8",
           "reasoning": true,
           "input": [
             "text",
@@ -94,11 +112,26 @@
             "image"
           ],
           "contextWindow": 1000000,
+          "maxTokens": 65536,
+          "thinkingLevelMap": {
+            "off": null,
+            "minimal": null,
+            "xhigh": null,
+            "max": null
+          }
+        },
+        {
+          "id": "MiniMax-M3",
+          "reasoning": true,
+          "input": [
+            "text",
+            "image"
+          ],
+          "contextWindow": 1000000,
           "maxTokens": 128000,
           "thinkingLevelMap": {
             "xhigh": null,
-            "max": null,
-            "off": null
+            "max": null
           }
         }
       ]

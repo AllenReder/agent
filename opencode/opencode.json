@@ -18,7 +18,7 @@
             "input": ["text", "image"],
             "output": ["text"]
           },
-          "limit": { "context": 1000000, "output": 128000 },
+          "limit": { "context": 1000000, "output": 256000 },
           "variants": {
             "low":    { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
             "high":   { "thinking": { "type": "enabled" }, "reasoningEffort": "high" },
@@ -27,44 +27,10 @@
             "off":    { "thinking": { "type": "disabled" } }
           }
         },
-        "gpt-5.6-luna": {
-          "name": "GPT-5.6 Luna",
+        "glm-5.3": {
+          "name": "GLM-5.3",
           "limit": { "context": 1000000, "output": 128000 },
           "variants": {
-            "light":      { "reasoningEffort": "low", "textVerbosity": "low" },
-            "medium":     { "reasoningEffort": "medium", "textVerbosity": "low" },
-            "high":       { "reasoningEffort": "high", "textVerbosity": "low" },
-            "xhigh": { "reasoningEffort": "xhigh", "textVerbosity": "low" },
-            "max":        { "reasoningEffort": "max", "textVerbosity": "low" }
-          }
-        },
-        "gpt-5.6-sol": {
-          "name": "GPT-5.6 Sol",
-          "limit": { "context": 1000000, "output": 128000 },
-          "variants": {
-            "light":      { "reasoningEffort": "low", "textVerbosity": "low" },
-            "medium":     { "reasoningEffort": "medium", "textVerbosity": "low" },
-            "high":       { "reasoningEffort": "high", "textVerbosity": "low" },
-            "xhigh": { "reasoningEffort": "xhigh", "textVerbosity": "low" },
-            "max":        { "reasoningEffort": "max", "textVerbosity": "low" }
-          }
-        },
-        "gpt-5.6-terra": {
-          "name": "GPT-5.6 Terra",
-          "limit": { "context": 1000000, "output": 128000 },
-          "variants": {
-            "light":      { "reasoningEffort": "low", "textVerbosity": "low" },
-            "medium":     { "reasoningEffort": "medium", "textVerbosity": "low" },
-            "high":       { "reasoningEffort": "high", "textVerbosity": "low" },
-            "xhigh": { "reasoningEffort": "xhigh", "textVerbosity": "low" },
-            "max":        { "reasoningEffort": "max", "textVerbosity": "low" }
-          }
-        },
-        "kimi-k3": {
-          "name": "Kimi K3",
-          "limit": { "context": 1000000, "output": 128000 },
-          "variants": {
-            "off":  { "thinking": { "type": "disabled" } },
             "low":  { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
             "high": { "thinking": { "type": "enabled" }, "reasoningEffort": "high" },
             "max":  { "thinking": { "type": "enabled" }, "reasoningEffort": "max" }
@@ -72,30 +38,97 @@
         },
         "glm-5.3-flash": {
           "name": "GLM-5.3 Flash",
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
           "limit": { "context": 1000000, "output": 128000 },
           "variants": {
-            "off":  { "thinking": { "type": "disabled" } },
             "low":  { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
             "high": { "thinking": { "type": "enabled" }, "reasoningEffort": "high" },
             "max":  { "thinking": { "type": "enabled" }, "reasoningEffort": "max" }
           }
         },
-        "MiniMax-M3": {
-          "name": "MiniMax-M3",
+        "kimi-k3": {
+          "name": "Kimi K3",
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
           "limit": { "context": 1000000, "output": 128000 },
           "variants": {
-            "off":    { "thinking": { "type": "disabled" } },
-            "on":     { "thinking": { "type": "adaptive" } }
+            "low":  { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
+            "high": { "thinking": { "type": "enabled" }, "reasoningEffort": "high" },
+            "max":  { "thinking": { "type": "enabled" }, "reasoningEffort": "max" }
+          }
+        },
+        "kimi-k3-256k": {
+          "name": "Kimi K3 256K",
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "limit": { "context": 262144, "output": 128000 },
+          "variants": {
+            "low":  { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
+            "high": { "thinking": { "type": "enabled" }, "reasoningEffort": "high" },
+            "max":  { "thinking": { "type": "enabled" }, "reasoningEffort": "max" }
+          }
+        },
+        "kimi-k2.8": {
+          "name": "Kimi K2.8",
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "limit": { "context": 1000000, "output": 128000 },
+          "variants": {
+            "low":  { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
+            "high": { "thinking": { "type": "enabled" }, "reasoningEffort": "high" },
+            "max":  { "thinking": { "type": "enabled" }, "reasoningEffort": "max" }
           }
         },
         "gemini-3.8-flash": {
           "name": "Gemini 3.8 Flash",
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "limit": { "context": 1000000, "output": 65536 },
+          "variants": {
+            "low":    { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
+            "medium": { "thinking": { "type": "enabled" }, "reasoningEffort": "medium" },
+            "high":   { "thinking": { "type": "enabled" }, "reasoningEffort": "high" }
+          }
+        },
+        "MiniMax-M3": {
+          "name": "MiniMax-M3",
+          "attachment": true,
+          "reasoning": true,
+          "tool_call": true,
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
           "limit": { "context": 1000000, "output": 128000 },
           "variants": {
-            "off":  { "thinking": { "type": "disabled" } },
-            "low":  { "thinking": { "type": "enabled" }, "reasoningEffort": "low" },
-            "high": { "thinking": { "type": "enabled" }, "reasoningEffort": "high" },
-            "max":  { "thinking": { "type": "enabled" }, "reasoningEffort": "max" }
+            "off":    { "thinking": { "type": "disabled" } },
+            "on":     { "thinking": { "type": "adaptive" } }
           }
         }
       }

@@ -50,8 +50,8 @@
           {
             "name": "deepseek-v4.1-flash",
             "max_tokens": 1000000,
-            "max_output_tokens": 128000,
-            "max_completion_tokens": 128000,
+            "max_output_tokens": 256000,
+            "max_completion_tokens": 256000,
             "capabilities": {
               "tools": true,
               "images": true,
@@ -64,8 +64,8 @@
           {
             "name": "gemini-3.8-flash",
             "max_tokens": 1000000,
-            "max_output_tokens": 128000,
-            "max_completion_tokens": 128000,
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 65536,
             "capabilities": {
               "tools": true,
               "images": true,
@@ -76,7 +76,7 @@
             },
           },
           {
-            "name": "glm-5.3-flash",
+            "name": "glm-5.3",
             "max_tokens": 1000000,
             "max_output_tokens": 128000,
             "max_completion_tokens": 128000,
@@ -90,7 +90,7 @@
             },
           },
           {
-            "name": "gpt-5.3-codex-spark",
+            "name": "glm-5.3-flash",
             "max_tokens": 1000000,
             "max_output_tokens": 128000,
             "max_completion_tokens": 128000,
@@ -104,8 +104,8 @@
             },
           },
           {
-            "name": "gpt-5.6-sol",
-            "max_tokens": 1000000,
+            "name": "kimi-k3-256k",
+            "max_tokens": 262144,
             "max_output_tokens": 128000,
             "max_completion_tokens": 128000,
             "capabilities": {
@@ -118,21 +118,7 @@
             },
           },
           {
-            "name": "gpt-5.6-terra",
-            "max_tokens": 1000000,
-            "max_output_tokens": 128000,
-            "max_completion_tokens": 128000,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": true,
-              "prompt_cache_key": true,
-              "chat_completions": true,
-              "interleaved_reasoning": true,
-            },
-          },
-          {
-            "name": "gpt-5.6-luna",
+            "name": "kimi-k2.8",
             "max_tokens": 1000000,
             "max_output_tokens": 128000,
             "max_completion_tokens": 128000,
