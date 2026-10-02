@@ -2,10 +2,8 @@
   "defaultProvider": "allenreder",
   "defaultModel": "deepseek-v4.1-flash",
   "packages": [
-    "npm:pi-mcp-adapter",
     "npm:pi-web-access",
     "npm:@juicesharp/rpiv-ask-user-question",
-    "npm:@juicesharp/rpiv-todo",
     "npm:pi-background-tasks",
     "npm:pi-subagents",
     "npm:pi-cc-extensions",
