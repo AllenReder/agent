@@ -1,3 +1,5 @@
 interface:
   display_name: "Zero Tech Debt"
   short_description: "Rework a change to its intended end state"
+policy:
+  allow_implicit_invocation: false
